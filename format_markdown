@@ -1,0 +1,46 @@
+#!/bin/sh
+
+set -o errexit -o nounset
+
+opts="$(\
+    getopt \
+    -n format_markdown \
+    -l to:,width:,hardbreaks,nobreaks,unsafe,validate-utf8,github-pre-lang,extension: \
+    -- w:e:t: "$@"\
+)"
+
+eval set -- "$opts"
+cmark_opts=""
+
+# copy arg-parsing from cmark-gfm
+# so we know what are options and what are filenames
+while true
+do
+    case "$1" in
+        -t|--to|-w|--width|-e|--extension)
+            cmark_opts="$cmark_opts $1 $2"
+            shift 2
+            ;;
+         --)
+             shift
+             break
+             ;;
+         *)
+            cmark_opts="$cmark_opts $1"
+            shift
+            ;;
+    esac
+done
+
+# run cmark-gfm in place (using a temp file)
+tmp_dir="$(mktemp -d "${TMPDIR:-/tmp/}$(basename "$0").XXXXXXXXXXXX")"
+trap 'rm -r "$tmp_dir"' EXIT
+
+for filename in $(printf "%s\n" "$@")
+do
+    tmp="$(mktemp -p "$tmp_dir")"
+    cp "$filename" "$tmp"
+
+    cmark-gfm --to commonmark $cmark_opts "$filename" > "$tmp"
+    cp "$tmp" "$filename"
+done
