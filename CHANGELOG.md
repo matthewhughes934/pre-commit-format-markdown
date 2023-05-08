@@ -1,3 +1,9 @@
+## 0.3.0 - 2023-05-08
+
+### Change
+
+  - Add default args of: `--with 80`
+
 ## 0.2.0 - 2023-05-08
 
 ### Added
