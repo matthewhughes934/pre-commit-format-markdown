@@ -1,6 +1,12 @@
--   id: format-markdown
+-   id: format-markdown-docker
     name: format-markdown
     description: Format markdown files with cmark-gfm
     entry: format_markdown
     language: docker
+    files: \.md$
+-   id: format-markdown-script
+    name: format-markdown
+    description: Format markdown files with cmark-gfm
+    entry: format_markdown
+    language: script
     files: \.md$
