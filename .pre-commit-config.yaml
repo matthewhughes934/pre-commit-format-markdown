@@ -1,0 +1,7 @@
+repos:
+-   repo: "https://github.com/matthewhughes934/pre-commit-format-markdown"
+    rev: v0.2.0
+    hooks:
+    -   id: format-markdown-docker
+        exclude: "tests/.*.md"
+        args: ["--width", "80"]
