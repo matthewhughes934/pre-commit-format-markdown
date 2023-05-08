@@ -9,7 +9,7 @@ trap 'mv "$HERE/original.md" "$HERE/input.md"' EXIT
 
 "$HERE/../format_markdown" --width 80 "$HERE/input.md"
 
-if ! git diff --no-index "$HERE/expected_output.md" "$HERE/input.md"
+if ! diff "$HERE/expected_output.md" "$HERE/input.md"
 then
     exit 1
 fi
