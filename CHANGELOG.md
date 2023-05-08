@@ -1,3 +1,15 @@
+## 0.2.0 - 2023-05-08
+
+### Added
+
+  - Add `pre-commit` `script` hook to allow running the hook without Docker
+  - Pass only required files to Docker
+  - Avoid running `cmark-gfm`'s test suite when building the docker image
+
+### Changed
+
+  - Pass only required files to Docker
+
 ## 0.1.0 - 2023-01-07
 
   - Initial release
