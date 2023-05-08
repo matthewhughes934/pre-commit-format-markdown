@@ -5,8 +5,8 @@ env:
   TAG: cmark-image
 
 jobs:
-  name: test-script
-  docker:
+  docker-test:
+    name: test-script
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
