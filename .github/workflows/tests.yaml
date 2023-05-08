@@ -5,6 +5,7 @@ env:
   TAG: cmark-image
 
 jobs:
+  name: test-script
   docker:
     runs-on: ubuntu-latest
     steps:
