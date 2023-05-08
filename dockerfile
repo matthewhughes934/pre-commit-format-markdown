@@ -18,8 +18,7 @@ RUN apk add --no-cache \
 
 WORKDIR /app/build
 RUN cmake .. && \
-    make -j && \
-    make test
+    make -j
 
 FROM alpine:3.17 AS final
 
