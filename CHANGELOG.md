@@ -1,3 +1,9 @@
+## 0.4.0 - 2023-05-08
+
+### Changed
+
+  - Add default arg of `--extension table`
+
 ## 0.3.0 - 2023-05-08
 
 ### Change
