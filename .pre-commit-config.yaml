@@ -4,4 +4,3 @@ repos:
     hooks:
     -   id: format-markdown-docker
         exclude: "tests/.*.md"
-        args: ["--width", "80"]
