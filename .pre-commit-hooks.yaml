@@ -4,11 +4,11 @@
     entry: format_markdown
     language: docker
     files: \.md$
-    args: ["--width", "80", "--extensions", "table"]
+    args: ["--width", "80", "--extension", "table"]
 -   id: format-markdown-script
     name: format-markdown
     description: Format markdown files with cmark-gfm
     entry: format_markdown
     language: script
     files: \.md$
-    args: ["--width", "80", "--extensions", "table"]
+    args: ["--width", "80", "--extension", "table"]
