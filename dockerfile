@@ -6,9 +6,7 @@ RUN apk add --no-cache \
         cmake \
         gcc \
         g++ \
-        libc-dev \
-        # required for tests
-        python3 && \
+        libc-dev && \
     git clone \
         --quiet \
         --depth 1 \
