@@ -1,4 +1,4 @@
-FROM alpine:3.20 AS build
+FROM alpine:3.21 AS build
 
 RUN apk add --no-cache \
         git \
@@ -18,7 +18,7 @@ WORKDIR /app/build
 RUN cmake .. && \
     make -j
 
-FROM alpine:3.20 AS final
+FROM alpine:3.21 AS final
 
 COPY --from=build /app/build/src/cmark-gfm /usr/local/bin/cmark-gfm
 COPY --from=build /app/build/src/libcmark-gfm.so.* /usr/local/lib
