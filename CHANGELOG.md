@@ -1,6 +1,8 @@
+# Changelog
+
 ## 0.5.0 - 2023-05-08
 
-### Fix
+### Fixed
 
   - Fix typo in arg name
 
@@ -12,7 +14,7 @@
 
 ## 0.3.0 - 2023-05-08
 
-### Change
+### Changed
 
   - Add default args of: `--with 80`
 
@@ -30,4 +32,4 @@
 
 ## 0.1.0 - 2023-01-07
 
-  - Initial release
+*Initial release*
