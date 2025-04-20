@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6.0 - 2025-04-20
+
+### Changed
+
+  - Drop `python3` as a build dependency
+  - Bump build image to Alpine 3.21
+  - Enforce common changelog
+
 ## 0.5.0 - 2023-05-08
 
 ### Fixed
